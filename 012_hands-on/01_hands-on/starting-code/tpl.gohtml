@@ -8,7 +8,49 @@
 
 {{range .}}
 
-<!-- PUT YOUR CODE HERE TO SHOW THE DATA-->
+<h2>{{.AcaYear}}</h2>
+
+<h3>{{.Fall.Term}}</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>Units</th>
+        </tr>
+    </thead>
+    <tbody>
+    {{range .Fall.Courses}}
+        <tr>
+            <td>{{.Number}}</td>
+            <td>{{.Name}}</td>
+            <td>{{.Units}}</td>
+        </tr>
+    {{end}}
+    </tbody>
+</table>
+
+<h3>{{.Spring.Term}}</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>Units</th>
+        </tr>
+    </thead>
+    <tbody>
+    {{range .Spring.Courses}}
+        <tr>
+            <td>{{.Number}}</td>
+            <td>{{.Name}}</td>
+            <td>{{.Units}}</td>
+        </tr>
+    {{end}}
+    </tbody>
+</table>
 
 {{end}}
 
